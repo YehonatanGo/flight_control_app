@@ -12,7 +12,7 @@ import java.net.Socket
 
 class MainActivity : AppCompatActivity() {
     private lateinit var ip: String
-    private lateinit var port: String
+    private var port: Int = 0
     private val view_model= ViewModel()
 
 
@@ -38,14 +38,15 @@ class MainActivity : AppCompatActivity() {
     fun on_button_click(view: View) {
         var joystick = findViewById<Joystick>(R.id.joystick)
         joystick.changeColor()
-        view_model.doStuff()
 //        var found : TextView = findViewById<TextView>(R.id.text_box)
-//        var editText:EditText = findViewById(R.id.editText)
-//        var editText2:EditText = findViewById(R.id.editText2)
+        var editText:EditText = findViewById(R.id.editText)
+        var editText2:EditText = findViewById(R.id.editText2)
 //        found.text = editText.text
-//        ip = editText.text.toString()
-//        port = editText2.text.toString()
-//
+        ip = editText.text.toString()
+        port = Integer.parseInt(editText2.text.toString())
+        view_model.connect(ip, port)
+
+    //
 //        var fg:Socket = Socket("172.19.3.158", 7555)
 //        var x = 5
 //        var t = Thread{

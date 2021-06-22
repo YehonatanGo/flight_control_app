@@ -20,26 +20,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="172.19.3.158"
+            android:text="172.28.160.1"
             android:ems="10"
             android:id="@+id/editText"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:text="7555"
             android:ems="10"
             android:id="@+id/editText2"/>
+
     <Button
             android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button3" android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp" android:id="@+id/button3" android:layout_weight="1"
             android:onClick="on_button_click"/>
-
     <com.example.flightcontrolapp.views.Joystick
+
             android:layout_width="match_parent"
             android:layout_height="393dp"
-            android:id="@+id/joystick"/>
+            android:id="@+id/joystick"
+
+
+    />
 
 
 
