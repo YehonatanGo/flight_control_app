@@ -59,12 +59,21 @@ class FGModel {
     }
 
     fun setRudder(new_rudder: Float) {
-        executor.execute(SendMessage(out, "set /controls/flight/rudder " + new_rudder + "\r\n"))
+        try {
+            executor.execute(SendMessage(out, "set /controls/flight/rudder " + new_rudder + "\r\n"))
+        } catch (e: Exception) {
+            Log.d("", "Connect!!!\r\n")
+        }
 
     }
 
     fun setThrottle(new_throttle: Float) {
-        executor.execute(SendMessage(out, "set /controls/engines/current-engine/throttle " + new_throttle + "\r\n"))
+        try {
+
+            executor.execute(SendMessage(out, "set /controls/engines/current-engine/throttle " + new_throttle + "\r\n"))
+        } catch (e: Exception) {
+            Log.d("", "Connect!!!\r\n")
+        }
 
     }
 
