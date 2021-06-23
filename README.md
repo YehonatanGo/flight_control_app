@@ -53,7 +53,7 @@ Build the project, and run.
 - The Model is created in the MainWindow, and then passed as an argument to the main View-Model's constructor. Later on, the Model is passed to the rest of the sub View-Models.
 - Our MainWindow initializes the main View-Model, and the Simulator screen initializes each sub View-Model in his constructor.
 - For more UML diagrams and .cd files (supported by Visual Studio) [Click Here](https://github.com/yanirbuznah/Flight-Inspection-App/tree/master/UML%20photos)
-### [Explanation video](https://youtu.be/7ZFw2OHoFSc)
+### [Explanation video](https://youtu.be/uIXyFRmBc6w)
 
 
 ### Final Result
