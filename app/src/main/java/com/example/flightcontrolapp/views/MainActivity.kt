@@ -1,15 +1,13 @@
 package com.example.flightcontrolapp.views
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.SeekBar
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.flightcontrolapp.R
 import com.example.flightcontrolapp.view_model.ViewModel
-import kotlinx.android.synthetic.main.activity_main.*
-import java.net.Socket
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var ip: String
@@ -36,12 +34,13 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                TODO("Not yet implemented")
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                TODO("Not yet implemented")
             }
+
         }
         )
 
@@ -51,39 +50,26 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 view_model.setRudder(progress.toFloat() / 100)
             }
+
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
 
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-            }}
+            }
+        }
         )
-
-
-//            fun(a:Float, e:Float){
-//            view_model.setAileron(a)
-//            view_model.setElevator(e)
-//        }
 
     }
 
     fun on_button_click(view: View) {
         var joystick = findViewById<Joystick>(R.id.joystick)
         joystick.changeColor()
-//        var found : TextView = findViewById<TextView>(R.id.text_box)
         var editText: EditText = findViewById(R.id.editText)
         var editText2: EditText = findViewById(R.id.editText2)
-//        found.text = editText.text
         ip = editText.text.toString()
         port = Integer.parseInt(editText2.text.toString())
         view_model.connect(ip, port)
-
-        //
-//        var fg:Socket = Socket("172.19.3.158", 7555)
-//        var x = 5
-//        var t = Thread{
-//            var client = Socket(ip, port.toInt())
-//        }
 
 
     }

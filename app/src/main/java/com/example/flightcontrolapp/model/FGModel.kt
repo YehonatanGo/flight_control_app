@@ -3,11 +3,9 @@ package com.example.flightcontrolapp.model
 import android.util.Log
 import java.io.PrintWriter
 import java.io.Writer
-import java.lang.Exception
 import java.net.Socket
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
-import kotlin.concurrent.thread
 
 
 class FGModel {
@@ -38,7 +36,6 @@ class FGModel {
         var new_aileron = minMax(aileron)
         Log.d("", "new_aileron:${new_aileron}")
 
-        //aileron.sendAileron(new_aileron)
         try {
             executor.execute(SendMessage(out, "set /controls/flight/aileron " + new_aileron + "\r\n"))
         } catch (e: Exception) {
@@ -86,7 +83,4 @@ class FGModel {
 
     }
 
-    fun doStuff() {
-        Log.d("", "Did stuff. Happy now?")
-    }
 }
