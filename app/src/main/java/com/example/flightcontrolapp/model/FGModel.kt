@@ -3,6 +3,7 @@ package com.example.flightcontrolapp.model
 import android.util.Log
 import java.io.PrintWriter
 import java.io.Writer
+import java.lang.Exception
 import java.net.Socket
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
@@ -33,13 +34,23 @@ class FGModel {
 
         Log.d("", "new_aileron:${new_aileron}")
         //aileron.sendAileron(new_aileron)
-        executor.execute(SendMessage(out,"set /controls/flight/aileron "+new_aileron+"\r\n"))
+        try{
+            executor.execute(SendMessage(out,"set /controls/flight/aileron "+new_aileron+"\r\n"))
+        }catch ( e: Exception){
+            Log.d("","Connect!!!\r\n")
+        }
+
 
     }
 
     fun setElevator(new_elevator:Float){
         Log.d("", "new_elevator:${new_elevator}\n")
-        executor.execute(SendMessage(out,"set /controls/flight/elevator "+new_elevator+"\r\n"))
+        try{
+            executor.execute(SendMessage(out,"set /controls/flight/elevator "+new_elevator+"\r\n"))
+        }catch ( e: Exception){
+            Log.d("","Connect!!!\r\n")
+        }
+
 
     }
 
