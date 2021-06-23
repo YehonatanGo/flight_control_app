@@ -24,6 +24,7 @@ class Joystick @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
+    lateinit var changeHandler: changeHandler
     private val innerCircle = Paint().apply {
         style = Paint.Style.FILL_AND_STROKE
         color = 0xfafafa
@@ -39,7 +40,6 @@ class Joystick @JvmOverloads constructor(
     private var orig_center: PointF = PointF(center.x, center.y)
     private var x_on_down: Float = 0f
     private var y_on_down: Float = 0f
-    lateinit var changeHandler: changeHandler
 
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -58,7 +58,7 @@ class Joystick @JvmOverloads constructor(
     fun changeColor() {
         innerCircle.color = Color.RED
         outterCircle.color = Color.GRAY
-        outterCircle.style = Paint.Style.FILL
+        outterCircle.style = Paint.Style.FILL_AND_STROKE
         invalidate()
     }
 

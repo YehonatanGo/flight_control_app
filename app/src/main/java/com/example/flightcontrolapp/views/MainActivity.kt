@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var joystick = findViewById<Joystick>(R.id.joystick)
+
+
         joystick.changeHandler = object : changeHandler {
             override fun onChange(a: Float, e: Float) {
                 view_model.setAileron(a)
