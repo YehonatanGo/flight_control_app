@@ -12,9 +12,8 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="172.28.160.1"
             android:ems="10"
-            android:id="@+id/editText" android:gravity="center"/>
+            android:id="@+id/editText" android:gravity="center" android:hint="IP"/>
     <EditText
             android:layout_width="290dp"
             android:layout_height="wrap_content"

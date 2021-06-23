@@ -22,13 +22,7 @@ class ViewModel {
         model.setThrottle(new_throttle)
     }
 
-    fun fake(v: Float) {
-        Log.d("", "got ya!")
-    }
-
     fun connect(ip: String, port: Int) {
         model.connect(ip, port)
     }
-
-
 }

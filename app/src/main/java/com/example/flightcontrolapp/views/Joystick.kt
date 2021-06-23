@@ -31,6 +31,7 @@ class Joystick @JvmOverloads constructor(
     }
     private val outterCircle = Paint().apply {
         style = Paint.Style.STROKE
+        strokeWidth  = 10F
         color = Color.BLACK
     }
     private var radius: Float = 0f
@@ -56,6 +57,8 @@ class Joystick @JvmOverloads constructor(
 
     fun changeColor() {
         innerCircle.color = Color.RED
+        outterCircle.color = Color.GRAY
+        outterCircle.style = Paint.Style.FILL
         invalidate()
     }
 
