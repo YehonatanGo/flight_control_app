@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.MainActivity" android:gravity="center">
+
+
+    <EditText
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="172.28.160.1"
+            android:ems="10"
+            android:id="@+id/editText" android:gravity="center"/>
+    <EditText
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="7555"
+            android:ems="10"
+            android:id="@+id/editText2" android:gravity="center"/>
+
+    <Button
+            android:text="Connect"
+            android:layout_width="290dp"
+            android:layout_height="88dp" android:id="@+id/button3"
+            android:onClick="on_button_click" android:gravity="center"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+    >
+
+        <com.example.flightcontrolapp.views.VerticalSeekBar
+                android:layout_width="61dp"
+                android:layout_height="290dp"
+                android:progress="0"
+                android:max="100"
+                android:min="0"
+                android:thumb="@drawable/thumb"
+
+
+                android:scrollbarStyle="outsideInset" android:id="@+id/throttle"/>
+        <com.example.flightcontrolapp.views.Joystick
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:id="@+id/joystick"
+
+
+                android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <SeekBar
+            android:layout_width="290dp"
+            android:layout_height="61dp" android:id="@+id/rudder" android:layout_gravity="center"
+            style="@style/Widget.AppCompat.SeekBar" android:max="100" android:min="-100" android:progress="0"
+            android:indeterminate="false"
+            android:progressTint="@android:color/transparent"
+            
+            android:clickable="true"
+            android:thumb="@drawable/thumb"
+    />
+
+
+
+</LinearLayout>
