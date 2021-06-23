@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.SeekBar
 import android.widget.TextView
 import com.example.flightcontrolapp.R
 import com.example.flightcontrolapp.view_model.ViewModel
@@ -13,19 +14,50 @@ import java.net.Socket
 class MainActivity : AppCompatActivity() {
     private lateinit var ip: String
     private var port: Int = 0
-    private val view_model= ViewModel()
+    private val view_model = ViewModel()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var joystick = findViewById<Joystick>(R.id.joystick)
-        joystick.changeHandler = object : changeHandler{
+        joystick.changeHandler = object : changeHandler {
             override fun onChange(a: Float, e: Float) {
                 view_model.setAileron(a)
                 view_model.setElevator(e)
             }
         }
+
+        val throttleSeekBar = findViewById<VerticalSeekBar>(R.id.throttle)
+        throttleSeekBar.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                view_model.setThrottle(progress.toFloat() / 100)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+        }
+        )
+
+        val rudderSeekBar = findViewById<SeekBar>(R.id.rudder)
+        rudderSeekBar.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                view_model.setRudder(progress.toFloat() / 100)
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }}
+        )
 
 
 //            fun(a:Float, e:Float){
@@ -39,14 +71,14 @@ class MainActivity : AppCompatActivity() {
         var joystick = findViewById<Joystick>(R.id.joystick)
         joystick.changeColor()
 //        var found : TextView = findViewById<TextView>(R.id.text_box)
-        var editText:EditText = findViewById(R.id.editText)
-        var editText2:EditText = findViewById(R.id.editText2)
+        var editText: EditText = findViewById(R.id.editText)
+        var editText2: EditText = findViewById(R.id.editText2)
 //        found.text = editText.text
         ip = editText.text.toString()
         port = Integer.parseInt(editText2.text.toString())
         view_model.connect(ip, port)
 
-    //
+        //
 //        var fg:Socket = Socket("172.19.3.158", 7555)
 //        var x = 5
 //        var t = Thread{

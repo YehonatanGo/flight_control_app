@@ -15,11 +15,11 @@ class ViewModel {
     }
 
     fun setRudder(new_rudder: Float) {
-        model.setAileron(new_rudder)
+        model.setRudder(new_rudder)
     }
 
     fun setThrottle(new_throttle: Float) {
-        model.setAileron(new_throttle)
+        model.setThrottle(new_throttle)
     }
 
     fun fake(v:Float){
