@@ -40,6 +40,9 @@ Build the project, and run.
 
 ### Project Structure
 
+* MVVM
+* Dependency Injection with Strategy Pattern
+* (Threadpool)
 
 <br /><br /><br /><br /><br />TODO : UML <br /><br /><br /><br />
 
@@ -47,6 +50,7 @@ Build the project, and run.
 <p align="center">
 <img src="https://github.com/YehonatanGo/flight_control_app/blob/main/UML/class%20diagram.png">
 </p>
+
 
 - Following the MVVM architectural pattern, there's one main View-Model and sub View-Models, one for each user story.
   As shown in the UML diagram above, the main View-Model (called `FGVM`) implements the IViewModel interface, and the sub View-Models (such as `ControlBarVM`, `JoyStickVM`,...) are inheriting from him (as required in our project instructions).
