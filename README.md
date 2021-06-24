@@ -1,10 +1,10 @@
 # Flight-Control-App
-An android application that co-responds to a Flight Gear Simulator app.</br>
+An android application that coresponds to a Flight Gear Simulator app.</br>
 This app impliment joystick and more for real-time flight in Flight Gear Simultor :shipit:.</br> *This app was written in Kotlin*
 
 
 ## Getting Started
-Open Flight Gear Simolator and add the line "--telnet=socket,in,10,<ip>,<port>,tcp" in the Additional Setting frame. when the ip is the ipv4 ip of the computer who run Flight Gear.
+Open Flight Gear Simulator and add the line "--telnet=socket,in,10,[ip],[port],tcp" in the Additional Setting frame. When the ip is the ipv4 of the computer who runs FlightGear.
 After downloading the project and the prerequisites, run the application and insert IP and Port in order to connect to the server and then press "Connect".
 Engoy!
 
@@ -20,7 +20,7 @@ Engoy!
 
 ### Dependencies
 
-To use all the features the Android device should have an API of 21 or higher
+To use all the features the Android device should have an API level 21 or higher
 
 ### Installing
 Download the zip for this repository or use git on the termianl. The terminal command is:
@@ -45,7 +45,7 @@ Build the project, and run.
 
 
 <p align="center">
-<img src="https://github.com/yanirbuznah/Flight-Inspection-App/blob/master/UML%20photos/MVVM.jpg?raw=true">
+<img src="https://github.com/YehonatanGo/flight_control_app/blob/main/UML/class%20diagram.png">
 </p>
 
 - Following the MVVM architectural pattern, there's one main View-Model and sub View-Models, one for each user story.
@@ -57,5 +57,5 @@ Build the project, and run.
 
 
 ### Final Result
-<img width="950" alt="Untitled" src="https://user-images.githubusercontent.com/65356872/115159871-012dfc80-a09e-11eb-947e-002cd49eaf6d.PNG">
+<img width="950" alt="Untitled" src="https://github.com/YehonatanGo/flight_control_app/blob/main/preview.jpg">
 
