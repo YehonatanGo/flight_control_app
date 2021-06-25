@@ -1,12 +1,16 @@
 package com.example.flightcontrolapp.views
 
+import android.net.InetAddresses.isNumericAddress
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flightcontrolapp.R
 import com.example.flightcontrolapp.view_model.ViewModel
+import kotlinx.android.synthetic.main.activity_main.*
+import java.util.regex.Pattern
 
 
 class MainActivity : AppCompatActivity() {
@@ -64,15 +68,32 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+    fun validateFields(ip: EditText, port: EditText): Boolean {
+
+        if (ip.getText().length < 1) {
+            ip.setError("Your Input is too short");
+            return false;
+        } else if (port.getText().length < 1) {
+            editText2.setError("Your Input is too short");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
     fun on_button_click(view: View) {
         var joystick = findViewById<Joystick>(R.id.joystick)
-        joystick.changeColor()
+
         var editText: EditText = findViewById(R.id.editText)
         var editText2: EditText = findViewById(R.id.editText2)
-        ip = editText.text.toString()
-        port = Integer.parseInt(editText2.text.toString())
-        view_model.connect(ip, port)
-
+        if (validateFields(editText,editText2)){
+            ip = editText.text.toString()
+            port = Integer.parseInt(editText2.text.toString())
+            view_model.connect(ip, port)
+            joystick.changeColor()
+        }
 
     }
 }

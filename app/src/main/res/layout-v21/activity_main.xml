@@ -19,7 +19,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:text="7555"
+            android:hint="PORT"
             android:ems="10"
             android:id="@+id/editText2" android:gravity="center"/>
 
