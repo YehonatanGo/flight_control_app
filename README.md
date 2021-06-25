@@ -30,13 +30,24 @@ git clone https://github.com/YehonatanGo/flight_control_app.git
 Build the project, and run.
 
 ### Running The Flight-Control-App
-<br /><br /><br /><br />
-//TODO : photo and explanation
+After activating the simulator and connecting to the IP and PORT.
+Click on the aircraft name and then, press auto start:
+![image](https://user-images.githubusercontent.com/65356872/123399054-d932ac00-d5ac-11eb-84fc-ed2990454c04.png)
+<br/>
 
-<br /><br /><br />
-#### Features
+<h5  align="center"> Now you can control the plane and fly!! </h5>
 
-<br /><br /><br /><br /><br /> TODO : לחרטט משהו <br /><br /><br /><br />
+
+### Features
+
+The goystick has 4 features:
+1. Elevator control. 
+2. Ailerotn control.
+3. Rudder control.
+4. Throttle control.
+<br/>
+
+![image](https://user-images.githubusercontent.com/65356872/123405552-9d9ae080-d5b2-11eb-8931-9c6c0587ce77.png)
 
 ### Project Structure
 
@@ -44,7 +55,6 @@ Build the project, and run.
 * Dependency Injection with Strategy Pattern
 * (Threadpool)
 
-<br /><br /><br /><br /><br />TODO : UML <br /><br /><br /><br />
 
 
 <p align="center">
