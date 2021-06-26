@@ -1,12 +1,12 @@
 # Flight-Control-App
-An android application that coresponds to a Flight Gear Simulator app.</br>
-This app impliment joystick and more for real-time flight in Flight Gear Simultor :shipit:.</br> *This app was written in Kotlin*
+An android application that corresponds to a Flight Gear Simulator app.</br>
+This app implements joystick and more for real-time flight in Flight Gear Simultor :shipit:.</br> *This app was written in Kotlin*
 
 
 ## Getting Started
 Open Flight Gear Simulator and add the line "--telnet=socket,in,10,[ip],[port],tcp" in the Additional Setting frame. When the ip is the ipv4 of the computer who runs FlightGear.
 After downloading the project and the prerequisites, run the application and insert IP and Port in order to connect to the server and then press "Connect".
-Engoy!
+Enjoy!
 
 ### General Prerequisites
 
@@ -40,7 +40,7 @@ Click on the aircraft name and then, press auto start:
 
 ### Features
 
-The goystick has 4 features:
+The joystick has 4 features:
 1. Elevator control. 
 2. Ailerotn control.
 3. Rudder control.
