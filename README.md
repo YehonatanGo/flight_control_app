@@ -62,11 +62,28 @@ The joystick has 4 features:
 </p>
 
 
-- Following the MVVM architectural pattern, there's one main View-Model and sub View-Models, one for each user story.
-  As shown in the UML diagram above, the main View-Model (called `FGVM`) implements the IViewModel interface, and the sub View-Models (such as `ControlBarVM`, `JoyStickVM`,...) are inheriting from him (as required in our project instructions).
-- The Model is created in the MainWindow, and then passed as an argument to the main View-Model's constructor. Later on, the Model is passed to the rest of the sub View-Models.
-- Our MainWindow initializes the main View-Model, and the Simulator screen initializes each sub View-Model in his constructor.
-- For more UML diagrams and .cd files (supported by Visual Studio) [Click Here](https://github.com/yanirbuznah/Flight-Inspection-App/tree/master/UML%20photos)
+- Following the MVVM architectural pattern, there's one main Model, View-Model and View, As shown in the UML diagram above.
+- The View as the MainActivity which contains three main parts:
+<ol>
+  <ul>
+  <li> 
+    "on_button_click" function - Which takes input from the user (ip and port) and connects to Flight-Gear.
+  </li>
+  </ul>
+  <ul>
+  <li>
+  "Joystick" class - The joystick contains the shape of the joystick and its functionality.    
+  </li>
+  </ul>
+  <ul>
+  <li>
+  onCreate function - The function is responsible for connecting all parts of the application, joystick and seekbars and inserting their functionality.    
+  </li>
+  </ul>
+</ol>
+  - The ViewModel connect the view and the model parts.
+- The Model open new thread and socket using Executor and send data to the flight gear app.
+
 ### [Explanation video](https://youtu.be/uIXyFRmBc6w)
 
 
