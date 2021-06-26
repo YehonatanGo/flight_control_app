@@ -61,9 +61,10 @@ The joystick has 4 features:
 <img src="https://github.com/YehonatanGo/flight_control_app/blob/main/UML/class%20diagram.png">
 </p>
 
-
-- Following the MVVM architectural pattern, there's one main Model, View-Model and View, As shown in the UML diagram above.
-- The View as the MainActivity which contains three main parts:
+Following the MVVM architectural pattern, there's one main Model, View-Model and View, As shown in the UML diagram above.
+<li>
+The View as the MainActivity which contains three main parts:  
+</li>
 <ol>
   <ul>
   <li> 
@@ -81,8 +82,12 @@ The joystick has 4 features:
   </li>
   </ul>
 </ol>
-  - The ViewModel connect the view and the model parts.
-- The Model open new thread and socket using Executor and send data to the flight gear app.
+<li>
+The ViewModel connect the view and the model parts.  
+ </li>
+<li>
+  The Model open new thread and socket using Executor and send data to the flight gear app.
+</li>
 
 ### [Explanation video](https://youtu.be/uIXyFRmBc6w)
 
